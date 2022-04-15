@@ -19,7 +19,19 @@
     <title>Tailored Travel</title>
     <style>
       #map {
-        height: 600px;
+        height: 400px;
+        background-color: #ccc;
+      }
+      #map::before {
+        content: "LOADING";
+        font-size: 3em;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        margin-top: 3em;
+      }
+      .leaflet-popup-content-wrapper {
+        width: 100%;
       }
     </style>
   </head>
@@ -36,6 +48,7 @@
         <option value="hotel">Hotel</option>
         <option value="market">Market</option>
       </select>
+      <button id="submit">Submit</button>
     </form>
     <div id="map"></div>
   </body>
